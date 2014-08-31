@@ -62,7 +62,8 @@ td {
   float: left;
   padding-top: 10px;
   padding-left: 100px;
-  width: 70%;
+  padding-bottom: 20px;
+  width: 65%;
 }
 
 .post-title{
