@@ -96,6 +96,10 @@ td {
   font-weight: bold;
 }
 
+.bucket-small {
+  font-size: .75em;
+}
+
 
 #footer{
   width: 100%;
