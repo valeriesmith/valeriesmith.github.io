@@ -35,6 +35,23 @@ header h1 {
   border-left: 1px solid gray;
 }
 
+#val {
+  width: 20%;
+  float: left;
+  padding: 0 2%;
+}
+
+#stef {
+  width: 20%;
+  padding: 0 2%;
+  float: right;
+}
+
+
+aside {
+  font-size: .75em;
+}
+
 aside h2 {
   font-style: italic;
 }
@@ -49,18 +66,3 @@ aside li {
   padding-bottom: 5px;
 }
 
-aside {
-  font-size: .75em;
-}
-
-#val {
-  width: 20%;
-  float: left;
-  padding: 0 2%;
-}
-
-#stef {
-  width: 20%;
-  padding: 0 2%;
-  float: right;
-}
