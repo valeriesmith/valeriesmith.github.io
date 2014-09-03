@@ -1,0 +1,66 @@
+body {
+  font-family: Lato, sans-serif;
+  font-size: 1em;
+}
+
+img {
+  background-color: beige;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+header {
+  width: 100%;
+  position: static;
+  padding: 0px 0px 5px 10px;
+  background-color: beige;
+  border-bottom: 1px solid gray;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#main {
+  width:47%;
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2%;
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+}
+
+aside h2 {
+  font-style: italic;
+}
+
+aside ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+
+aside li {
+  padding-bottom: 5px;
+}
+
+aside {
+  font-size: .75em;
+}
+
+#val {
+  width: 20%;
+  float: left;
+  padding: 0 2%;
+}
+
+#stef {
+  width: 20%;
+  padding: 0 2%;
+  float: right;
+}
