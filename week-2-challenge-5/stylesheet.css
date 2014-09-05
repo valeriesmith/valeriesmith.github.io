@@ -1,0 +1,131 @@
+/* You'll want to make the site responsive and nice looking here. Have fun!*/
+
+
+/*these are the settings for the smaller screen*/
+
+#header {
+  max-width: 85%;
+  margin: 0 0 1.5625% 0;
+  background: black;
+  color: white;
+}
+
+/*unfloating the container that holds the nav bar so that it will appear above the content*/
+#side-a {
+  float: none;
+}
+
+/*making the links appear in a row*/
+#side-a ul li{
+  display: inline;
+  padding: 0% 1% 0 1%;
+}
+
+/*format the text to be centered, with winder margins.*/
+p {
+  width: 75%;
+  text-align: center;
+  margin: 2% 5% 2% 5%;
+}
+
+/*set the header tag not to appear at smaller screen size.  Will be displayed inline*/
+h2 {
+  display: none;
+}
+
+/*set the max width of the image to 83% of the its container*/
+img {max-width: 83%;}
+
+/*format reflection class with a smaller font size and a different color*/
+.reflection {
+  font-size: .75em;
+  color: darkblue;
+}
+
+/*set up the title to display inline and bold at smaller screen size*/
+.inline_title {
+  display: inline;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/*end the smaller screen settings*/
+
+
+/*begin the elements for the rest*/
+@media screen and (min-width: 960px) {
+
+
+#wrapper {
+  text-align: left;
+  margin: 0px auto;
+  padding: 0px;
+  border:0;
+  width: 100%; /*original width was 960*/
+  background: url("http://cdn.elegantthemes.com/blog/wp-content/uploads/2013/09/bg-6-full.jpg") repeat;
+  color:black;
+  font-size: 2em;
+}
+
+/*add block specification, otherwise it inherits it from above*/
+#side-a ul{
+  list-style-type:none;
+  display: block;
+}
+
+a {
+  color:black;
+}
+
+#header {
+  margin: 0 0 1.5625% 0;
+  background: black;
+  color: white;
+}
+
+#side-a {
+  float: left;
+  width: 15.625%;
+}
+
+#side-a li{
+  padding-top: 2.0833%;
+}
+
+#side-b {
+  float: right;
+  width: 15.625%;
+}
+
+#content {
+  float: left;
+  width: 68%;
+}
+
+/*add a p tag to keep it from inheriting from above*/
+p {
+  width: auto;
+  font-size: 1em;
+  text-align: left;
+  margin: auto;
+}
+
+/*specify that h2 elements should be displayed as a block instead of inline as specified above*/
+h2 {
+  display: block;
+}
+
+/*remove the inline title*/
+.inline_title {
+  display: none;
+}
+
+#footer {
+  clear: both;
+  background: #A2A2A2;
+}
+/*}*/
+
+
+
+
