@@ -1,0 +1,145 @@
+
+body {
+  font-family: helvetica,sans-serif;
+  font-size: 1em;
+  color: #424242;
+}
+
+#wrapper {
+  width: 90%;
+  margin: auto
+}
+
+a:link {
+  color: #006666;
+}
+
+a:visited {
+  color: #006666;
+}
+
+a:hover {
+  color: orange;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+#header {
+  font-size: 2em;
+  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+
+  background-color: #000000;
+  color: #E8E8E8;
+  font-family: Pompiere;
+}
+
+#top-nav {
+  width: 50%;
+  margin-top: 2%;
+  font-size: .6em;
+  font-weight: bold;
+  float: right;
+}
+
+.nav ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.nav li {
+  padding-left: 3%;
+  display: inline;
+  text-decoration: none;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+#content {
+  width: 70%;
+  padding-left: 5%;
+  padding-top: 1%;
+  padding-right:5%;
+  padding-bottom: 5%;
+  /*background-color: blue;*/
+  float: left;
+  font-size: .75em;
+  min-height: 300px;
+}
+
+#content h2 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#sidebar {
+    padding-top: 1%;
+width: 20%;
+  float: right;
+  min-height: 300px;
+}
+
+#sidebar img {
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-top: 5%;
+  /*margin: 15%, 15%, 15%, 15%;*/
+  max-width: 60%;
+}
+
+#sidebar ul li {
+  list-style-type: none;
+  padding-bottom: 2%;
+}
+
+
+.post-date{
+  font-weight: bold;
+  font-style: italic;
+  font-size: .75em;
+}
+
+
+#sidebar-bucket {
+  font-size: .75em;
+  border-bottom: 1px solid #D8D8D8;
+  margin: 10px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.bucket-title {
+  font-family: pompiere;
+  font-size: 2em;
+  color: #2E2E2E;
+}
+
+
+#footer{
+  width: 95%;
+  clear: both;
+  background-color: #E8E8E8;
+  border-top: 1px solid #D8D8D8;
+  border-bottom: 1px solid #D8D8D8;
+  padding-left: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  font-family: pompiere;
+  font-size: .75em;
+  font-weight: bold
+}
+
+#footer img {
+  vertical-align: bottom;
+  padding: .2%;
+}
