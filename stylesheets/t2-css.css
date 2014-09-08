@@ -1,0 +1,18 @@
+
+#example-wrapper {
+  border: 5px solid black;
+}
+
+#none {
+  border: 2px solid red;
+}
+
+#padding {
+  border: 2px solid red;
+  padding: 10px;
+}
+
+#margin {
+  border: 2px solid red;
+  margin: 10px;
+}
