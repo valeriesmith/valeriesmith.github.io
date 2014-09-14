@@ -26,14 +26,35 @@
 
 
 <!-- begin post-content div -->
-    <div id="content">
-      <h2>Title Goes Here</h2><br>
+<div id="content">
+      <h2>Working with Margin, Border, and Padding in CSS</h2><br>
 
-      <span class="post-date">Date Goes Here</span>
+      <span class="post-date">September 7, 2014</span>
+
+      <p>Margins, borders, and padding are all ways to create white space and create visual boundaries between elements on a web page. It's important to remember that all three of these all take up space on the page. When you're trying to determine the width of the various elements on your page, you must take this into account and adjust the widths of the parent elements accordingly. </p></p>
+
+      <h3>Borders</h3>
+
+      <p>When a border is specified, the page element will render with a square bounding box around it.  The color, style, and size of a border is specified in the CSS. In addition, it's possible to specify whether a border should go all the way around, or only appear on the top, bottom, left, or right sides of the element. In the example below, I have specified a red solid border that is two pixels wide and goes all the way around the element.</p>
+
+      <div id="example-wrapper"><div id="none">Here is the text with a red border around it, but with margins and padding set to 0</div></div>
+
+      <h3>Padding</h3>
+
+      <p>Padding refers to the amount of space between an element and its parent element. In the example below, you can see that my border is still there, but that there is 10px of space between the text and the border. I've kept the border to show you where the edges of the text element lie.</p>
+
+      <div id="example-wrapper"><div id="padding">Here is the text with a red border around it, and with padding set to 10px.</div></div>
+
+      <h3>Margin</h3>
+
+      <p>Margin refers to the amount of space between the border of an element and its parent element. In the example below, I set the padding to 0px, but set a margin of 10px all the way around the text.  While there's no extra space between the text and the border, there is 10px of space between the border and the edge of the parent element.
 
 
+    <div id="example-wrapper"><div id="margin">Here is the text with a red border around it, and with the margin set to 10px.</div></div>
 
         </div>
+
+
 <!-- end content div -->
 
 <!-- begin sidebar div -->
