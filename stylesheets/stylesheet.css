@@ -143,3 +143,10 @@ width: 20%;
   vertical-align: bottom;
   padding: .2%;
 }
+
+.code {
+  font-family: courier;
+  background-color: #FFFFCC;
+  padding: 1%;
+  display: block;
+}

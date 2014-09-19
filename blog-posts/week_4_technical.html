@@ -26,12 +26,52 @@
 
 <!-- begin post-content div -->
     <div id="content">
-      <h2>Title Goes Here</h2><br>
+      <h2>Using the Inject Method</h2><br>
 
-      <span class="post-date">Date Goes Here</span>
+      <span class="post-date">September 18, 2014</span>
+<h3>Summary</h3>
+
+<p>The inject method in Ruby is commonly used as a way to accumulate a collection of objects.  Given a set of objects, it will iterate over each one, executing whatever code is specified, and return a result. Inject is useful for dealing with collections of objects, such as strings, arrays, and hashes.  Let's have a look at the format, and then I will go over some possible use cases.</p>
+
+<h3>Format</h3>
+
+<span class = "code">[array elements].inject(parameter) { |result, element| code to be executed}</span>
 
 
+<p>The inject method is called in the same way as any other method. That is, with the dot method following the object. For this example I've used an array.</p>
 
+<p>It's possible to pass arguments to the method.  The argument passed will act as the starting point for the iteration. It could be an empty array, an empty hash, or a number.</p>
+
+<p>Next we set up the code.  The  argument on the left is the result. It will always hold the value of the accumulated result of the all of the iterations of the code block.  The argument on the right represents each element to be passed through the code block.</p>
+
+<h3>Uses</h3>
+
+<p>One of the simplest uses of the inject method is to return a sum of an array of numbers. For example:</p>
+
+<span class = "code">[1, 2, 3, 4].inject(0) { |result, element| result + element }</span>
+
+<p>In this case, we are iterating over the array [1,2,3,4] is added to the result for a total of 10.  Each time we execute the code, the result is stored.</p>
+
+<p>We could also use inject to build a hash based on some existing values stored in a multiple array:</p>
+
+<span class = "code">petHash = [["cat", "sneaky"], ["dog", "great"], ["ferret", "stinky"]].inject({}){<br>
+  |hash, element|<br>
+  hash[element[0]] = element[1]
+  hash<br>
+  }</span>
+
+<p>with the result:</p>
+
+<span class = "code">{"cat"=>"sneaky", "dog"=>"great", "ferret"=>"stinky"}</span>
+
+<p>In this case, we have iterated over an existing multidimensional array and used its values to create a new hash, called petHash.  The parameter of the inject method is an empty array.  The accumulated result is a hash.  With each iteration, each element of the original array becomes a key-value pair in the new hash.</p>
+
+<p>Here are a few of the resources I used to help me understand the inject method:</p>
+<ul>
+<li><a href="http://ruby-doc.org/core-2.0.0/Enumerable.html#method-i-inject" target="_blank">Ruby Docs</a></li>
+<li><a href="http://blog.jayfields.com/2008/03/ruby-inject.html" target="_blank">Jay Fields' Blog</a></li>
+<li><a href="https://www.udemy.com/blog/ruby-inject/" target="_blank">Udemy: Ruby Inject: How to manipulate your arrays with ease</a></li>
+</ul>
         </div>
 <!-- end content div -->
 
