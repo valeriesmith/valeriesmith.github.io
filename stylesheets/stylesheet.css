@@ -77,6 +77,11 @@ ul {
   min-height: 300px;
 }
 
+#content img {
+max-width: 80%;
+}
+
+
 #content h2 {
   margin-bottom: 0;
   padding-bottom: 0;
