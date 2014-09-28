@@ -26,10 +26,38 @@
 
 <!-- begin post-content div -->
     <div id="content">
-      <h2>Title Goes Here</h2><br>
+      <h2>Working with Classes in Ruby</h2><br>
 
-      <span class="post-date">Date Goes Here</span>
+      <span class="post-date">September 28, 2014</span>
+<p>For this post, I'm actually going to use pattern making and technical design as my the real world example of building a class in Ruby. Let's say that I want to have a shirt produced in a factory. I have to provide exact instructions to the machine operator.  It is not his or her job to have to make judgement calls about what the shirt looks like or how it should be constructed.</p>
 
+<p>To start, will use the same main pattern pieces for each shirt. For this example, I am going to pretend that all the shirts are the same size, because I am not going to tackle pattern grading theory in this post.  Every time I want to produce a new shirt, I cut out the pieces from a pattern.  The cut out pieces correspond to an instance of a class.  Now, I have choices to make about my shirt.</p>
+<ul>
+
+<li>For example, will it have short or long sleeves.  If long, how should it be constructed?</li>
+<br>
+<li>What color will the shirt be?</li>
+</ul>
+<p>The decisions that I make about the sleeves and color correspond to the instance variables of a class, which hold what is called state information about a class instance.
+</p>
+
+<p>In addition to these variables, I have to decide how I will construct the shirt, what sewing techniques  I'll use for each piece of the shirt, and whether I will be attaching buttons, and at what points I need to stop and press the shirt before continuing to the next step of constructions.  The actions that I take to construct any shirt correspond to instance methods in a class.</p>
+
+<p>Let's take a look at how this might play out in Ruby.  To keep the code short, I am giving instructions about  two things: how to proceed if the shirt has long or short sleeves, and what color thread to use based on the color of the shirt.</p>
+
+<img src="../imgs/shirt_code.jpg"></src>
+
+<p>I start off by defining a class called Shirt. Simple enough.  Next, I create a method called initialize.  Basically, this method runs every time I create a new instance of class Shirt.  Since this class is pretty simple, all I'm doing in the initialize method is saying that my I will be specifying the sleeve length and color of my shirt.</p>
+
+<p>Next, I want to create some instructions based on decisions I've made about the sleeves and color of the shirt.  The instructions method is telling the sewing operator how to finish the sleeves based on their length.  Keep in mind that technically, this information is wrong. Maybe I should have chosen a less complex example. In this method, I'm also telling the factory to use thread the same color as the shirt.</p>
+
+<p>At the very bottom of the code, I create a new instance of the shirt, called newShirt. I have decided that my shirt will have long sleeves and will be green in color. The last thing that I do is call the instructions method on this new instance of shirt.  When I do this, the program generates woefully inadequate sewing instructions based on the options I've chosen for the shirt: long sleeves and the color green.</p>
+
+<p>My output would look like this:</p>
+
+<p><strong>Use green thread on the garment, and to add a cuff with buttons to finish the sleeve.</strong></p>
+
+<p>You can see that the @color and construction variables have been replaced with the value I've supplied in the initialize method, for the color.  Note that the construction variable does not have an @ in front of it. This is because we do not need to refer to it outside of this method.  It is not needed outside of the method.  The @color variable, meanwhile, is referenced throughout the class, and the @ means that it will be recognized anywhere within the class.</p>
 
 
         </div>
