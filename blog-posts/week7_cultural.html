@@ -26,52 +26,28 @@
 
 <!-- begin post-content div -->
     <div id="content">
-      <h2>Using the Inject Method</h2><br>
+      <h2>Personal Values and Stereotype Threat</h2><br>
 
-      <span class="post-date">September 18, 2014</span>
-<h3>Summary</h3>
+      <span class="post-date">October 8, 2014</span>
 
-<p>The inject method in Ruby is commonly used as a way to accumulate a collection of objects.  Given a set of objects, it will iterate over each one, executing whatever code is specified, and return a result. Inject is useful for dealing with collections of objects, such as strings, arrays, and hashes.  Let's have a look at the format, and then I will go over some possible use cases.</p>
+<h3>Values</h3>
 
-<h3>Format</h3>
+<p>It's hard to select just one or two values from the list we were given.  I consider will-power an important value, especially right now as I prepare to start the on-site part of DBC. Will-power is the means by which I force myself to do things that are unappealing in the moment but that are ultimately beneficial to me or to the people I care about. </p>
 
-<span class = "code">[array elements].inject(parameter) { |result, element| code to be executed}</span>
+<p>Kindness is the second value that I chose, even though it's not on the list. This is a value that I have acquired over time, by witnessing the kind and unkind behavior around me.  As we've discussed when talking about feedback, kind and nice are not the same thing.  To me, kindness means being able to treat others with genuine respect and not be driven by the needs of my own ego.</p>
+
+<p>I am not always successful in living up to either of these values.  On a scale of three to 5, I think I'm about a 3 for will-power right now.  I find that I don't seem to be able to maintain will-power across all areas of my life at once.  Right now, I'm doing well at getting up early,  getting my DBC phase 0 work done, and exercising.  Every Sunday,I make a work and exercise roadmap for the coming week so that my tasks are broken down into chunks.  This habit supports my will-power.  However, I am not doing well right now with eating healthy food at appropriate times of the day, even though I consider doing so important for my health. I haven't taken the time to develop habits and routines to support this goal when I'm busy and stressed-out.  If I put a bowl of carrots and other veggies out every morning, I will eat them throughout the day, and if I take a break to eat dinner around 6pm, I won't be starved and order takeout at 9pm.</p>
+   
+<p>As far as kindness is concerned,  I also consider myself a three - in the middle of the scale.  I'm not a villain, but my thoughts and actions are not always in line with this value.  I have worked hard at training myself to practice empathy towards the people I encounter every day, but there are definitely situations in my close relationships that provoke knee-jerk reactions.  I find it really hard sometimes to take a step back and ask myself if it's productive to get upset over things that are not important or that I can't change.  It's also hard for me to feel kindness towards people who do things that I find morally reprehensible (mean to animals, lack of civic-mindedness, etc.)  I'm just not there yet and I don't know if I ever will be.</p>
 
 
-<p>The inject method is called in the same way as any other method. That is, with the dot method following the object. For this example I've used an array.</p>
+<h3>Advice</h3>
 
-<p>It's possible to pass arguments to the method.  The argument passed will act as the starting point for the iteration. It could be an empty array, an empty hash, or a number.</p>
+<p>The last time I was asked for advice was by a friend. She wanted my advice about what shoes to buy to go with a skirt for a formal event.  I can't say that this relates to my values. I do like shoes but I'm also a lot less interested in clothing and fashion trends than I used to be.  My priorities around how I want to spend my mental energy and money have changed.  I went through a very difficult period financially and emotionally a few years ago,  and it completely changed the way I feel about the acquisition of material goods. At the same time this was going on, I read <a href="http://www.overdressedthebook.com/">Overdressed: The Shockingly High Cost of Cheap Fashion</a>, which is a book by Elizabeth Cline about how <em>fast fashion</em> companies like H&amp;M and Forever 21 have changed the fashion industry and our habits as consumers. I was already on the fence, but reading this book really helped bring about a change in how I view the consumption of clothing and consumer goods. That being said, I still like a good pair of shoes and my wallet is not safe at <a href="http://www.britexfabrics.com">Britex Fabrics</a>.</p>  
 
-<p>Next we set up the code.  The  argument on the left is the result. It will always hold the value of the accumulated result of the all of the iterations of the code block.  The argument on the right represents each element to be passed through the code block.</p>
+<h3>Values and Stereotype Threat</h3>
 
-<h3>Uses</h3>
-
-<p>One of the simplest uses of the inject method is to return a sum of an array of numbers. For example:</p>
-
-<span class = "code">[1, 2, 3, 4].inject(0) { |result, element| result + element }</span>
-
-<p>In this case, we are iterating over the array [1,2,3,4] is added to the result for a total of 10.  Each time we execute the code, the result is stored.</p>
-
-<p>We could also use inject to build a hash based on some existing values stored in a multiple array:</p>
-
-<span class = "code">petHash = [["cat", "sneaky"], ["dog", "great"], ["ferret", "stinky"]].inject({}){<br>
-  |hash, element|<br>
-  hash[element[0]] = element[1]
-  hash<br>
-  }</span>
-
-<p>with the result:</p>
-
-<span class = "code">{"cat"=>"sneaky", "dog"=>"great", "ferret"=>"stinky"}</span>
-
-<p>In this case, we have iterated over an existing multidimensional array and used its values to create a new hash, called petHash.  The parameter of the inject method is an empty array.  The accumulated result is a hash.  With each iteration, each element of the original array becomes a key-value pair in the new hash.</p>
-
-<p>Here are a few of the resources I used to help me understand the inject method:</p>
-<ul>
-<li><a href="http://ruby-doc.org/core-2.0.0/Enumerable.html#method-i-inject" target="_blank">Ruby Docs</a></li>
-<li><a href="http://blog.jayfields.com/2008/03/ruby-inject.html" target="_blank">Jay Fields' Blog</a></li>
-<li><a href="https://www.udemy.com/blog/ruby-inject/" target="_blank">Udemy: Ruby Inject: How to manipulate your arrays with ease</a></li>
-</ul>
+<p>I think of my values as a work in progress.  I will probably always need to work to align my daily thoughts and actions with my values.   I think that recognizing stereotype threat is the first step towards mediating it.  Equally important but harder is having a plan to combat negative feelings as they arise.  Hardest is figuring out how to deal with being stereotyped by others.  I find that physical exercise such as walking or working out at the gym is beneficial when I'm feeling down, so I definitely plan to use that as time permits.  When I feel bad, I also find it's helpful to try to focus on some concrete, manageable problem or task instead of beating myself up. </p>
         </div>
 <!-- end content div -->
 
