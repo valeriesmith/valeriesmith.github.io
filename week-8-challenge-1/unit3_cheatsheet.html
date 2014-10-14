@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <title>SQL Cheatsheet</title>
+  </head>
+  <body>
+
+  <header>SQL CHEATSHEET</header>
+
+  <section id="example">
+    <table id="nest">
+      <tr>
+
+      <!--begin nested table 1-->
+      <td>
+        <table id="groceries">
+          <tr>
+            <td colspan="4" class="table-title">Grocery Items</td>
+          </tr>
+          <tr>
+            <th>name</th>
+            <th>type</th>
+            <th>price</th>
+            <th>id</th>
+          </tr>
+
+          <tr>
+            <td>banana</td>
+            <td>produce</td>
+            <td>1</td>
+            <td>001</td>
+          </tr>
+
+          <tr>
+            <td>apple</td>
+            <td>produce</td>
+            <td>2</td>
+            <td>002</td>
+          </tr>
+
+          <tr>
+            <td>tomato soup</td>
+            <td>canned goods</td>
+            <td>3</td>
+            <td>003</td>
+          </tr>
+
+            <tr>
+            <td>granola bars</td>
+            <td>snacks</td>
+            <td>5</td>
+            <td>004</td>
+          </tr>
+        </table>
+      </td>
+      <!--end nested table-->
+
+      <!--begin nested table 2-->
+      <td>
+        <table id="aisles">
+          <tr>
+            <td colspan="2" class="table-title">Aisles</td>
+          </tr>
+          <tr>
+            <th>aisle_number</th>
+            <th>aisle_type</th>
+          </tr>
+
+          <tr>
+            <td>1</td>
+            <td>produce</td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>canned foods</td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td>snacks</td>
+          </tr>
+        </table>
+      </td>
+       <!--end nested table-->
+
+      </tr>
+    </table>
+  </section>
+
+
+  <section>
+
+    <table id="cheatsheet">
+      <tr>
+        <th>Key Term</th>
+        <th>Description</th>
+        <th>Example</th>
+        <th>Result</th>
+
+      </tr>
+      <tr>
+        <td>SELECT</td>
+        <td>Used to select fields within a database</td>
+        <td>SELECT name FROM grocery_items;</td>
+        <td>banana, apple, tomato soup, granola bars</td>
+      </tr>
+      <tr>
+        <td>SELECT DISTINCT</td>
+        <td>Used to list only different values from a given column</td>
+        <td>SELECT DISTINCT aisle_type FROM grocery_items;</td>
+        <td>produce, canned goods, snacks<br>
+        *note that snacks is not repeated</td>
+      </tr>
+
+      <tr>
+        <td>WHERE</td>
+        <td>Used to specify conditions to be met</td>
+        <td>SELECT name FROM grocery_items WHERE type = 'produce';</td>
+        <td>banana, apple</td>
+      </tr>
+
+       <tr>
+        <td>OR</td>
+        <td>Boolean comparison to check whether one condition is true</td>
+        <td>SELECT name FROM grocery_items WHERE type = 'produce' OR type = 'snacks'</td>
+        <td>banana, apple, granola bars</td>
+      </tr>
+
+      <tr>
+        <td>AND</td>
+        <td>Boolean comparison to check whether both conditions are true</td>
+        <td>SELECT name FROM grocery_items WHERE price > 1 AND price < 5</td>
+        <td>apple, tomato soup</td>
+      </tr>
+
+      <tr>
+        <td>ORDER BY</td>
+        <td>Used to sort results.  Default is ascending order</td>
+        <td>SELECT name FROM grocery_items ORDER BY price ASC</td>
+        <td>banana, apple, tomato soup, granola bars</td>
+      </tr>
+
+      <tr>
+        <td>Wildcards / LIKE</td>
+        <td>Used to find all results containing characters specified. Used in conjunction with LIKE</td>
+        <td>SELECT name FROM grocery_items WHERE name LIKE 'a%'</td>
+        <td>apple</td>
+      </tr>
+
+       <tr>
+        <td>IN</td>
+        <td>Used to find multiple values in a WHERE clause</td>
+        <td>SELECT name from grocery_items WHERE name IN ('apple','banana')</td>
+        <td>apple, banana</td>
+      </tr>
+
+      <tr>
+        <td>JOIN</td>
+        <td>Used to combine results from multiple tables</td>
+        <td>SELECT name, aisle_number FROM grocery_items JOIN aisles ON (type = aisle_type)</td>
+        <td>apple => 1, banana => 1, tomato soup => 2, granola bar => 3</td>
+      </tr>
+
+
+      <tr>
+        <td>ALTER</td>
+        <td>Used to change columns within a table</td>
+        <td>ALTER TABLE grocery_items ADD sell_by DATE NOT NULL</td>
+        <td>This will add a column with a sell by date for each item. This value must be filled in</td>
+      </tr>
+
+      <tr>
+        <td>SUM</td>
+        <td>Aggregate function used to return the sum of the numeric column</td>
+        <td>SELECT SUM(price) FROM grocery_items</td>
+        <td>11</td>
+      </tr>
+
+      <tr>
+        <td>COUNT</td>
+        <td>Aggregate function used to return the number of rows that meet certain conditions</td>
+        <td>SELECT COUNT(type) FROM grocery_items WHERE type = 'produce'</td>
+        <td>2</td>
+      </tr>
+
+      <tr>
+        <td>GROUP BY</td>
+        <td>Used in conjunction with aggregate functions to group results</td>
+        <td>SELECT COUNT(type), type FROM grocery_items GROUP BY type</td>
+        <td>canned goods => 1, produce => 2, snacks => 1</td>
+      </tr>
+
+
+
+    </table>
+
+
+  </section>
+  </body>
+</html>

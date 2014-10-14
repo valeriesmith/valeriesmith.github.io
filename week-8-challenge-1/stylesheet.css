@@ -1,0 +1,71 @@
+header {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 2em;
+  border-bottom: 2px black solid;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #808080;
+  color: white;
+}
+
+td {
+  padding: 5px 5px 5px 5px;
+}
+
+#nest td {
+  vertical-align: top;
+}
+
+#example {
+  width: 40%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#groceries {
+  border: 1px black solid;
+  margin: 10px 10px 10px 10px;
+  background-color: #a9a9a9;
+}
+
+.table-title {
+  text-align: center;
+  font-weight: bolder;
+}
+
+#groceries td {
+  border: 1px black solid;
+}
+
+#aisles {
+  border: 1px black solid;
+  /*margin: 10px 10px 55px 10px;*/
+  margin: 10px 10px 10px 10px;
+  background-color: #a9a9a9;
+  vertical-align: text-top;
+
+}
+
+#aisles td {
+   border: 1px black solid;
+}
+
+#cheatsheet tr {
+  border: 1px black solid;
+}
+
+#cheatsheet td {
+  border-left: 1px black solid;
+  border-right: 1px black solid;
+
+}
+
+#cheatsheet tr:nth-child(even) {background: #CCC}
