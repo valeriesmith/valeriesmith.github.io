@@ -1,18 +1,56 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>DOM manipulation with jQuery</title>
+$(document).ready(function(){
  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+//RELEASE 0: 
+  //link the image
  
-  <script type="text/javascript" src="jquery_example.js"></script>
-</head>
-<body>
-  <h1> Hello. Welcome to the jQuery DOM Manipulation Challenge! </h1>
-  <div class="mascot">
-    <h1> My DBC Mascot </h1>
-    <img width="20%" border="1px" src="../../imgs/dbc_logo.jpg">
-  </div>
+//RELEASE 1:
+
+  //Link this script and the jQuery library to the jquery_example.html file and analyze what this code does. 
  
-</body>
-</html>
+$('body').css({'background-color': 'pink'})
+
+//RELEASE 2:
+bodyElement = $('body')
+h1Element = $('h1')
+imageElement = $('img')
+
+headerTest = $(':header')
+ 
+everyThing = $('*')
+
+//RELEASE 3: 
+$('body > h1').css({border: '5px solid red', color: 'green', visibility: 'hidden'})
+$('div.mascot h1').html('Largemouth Bass')
+ 
+ 
+//RELEASE 4: Event Listener
+ // $('img').on('mouseenter', function(e){
+ //     e.preventDefault()
+ //    $(this).attr('src', '../../imgs/lmbassbig.jpg')
+ //  })
+ 
+ // $('img').on('mouseenter', function(e){
+	//  e.preventDefault()
+ //    $(this).attr('src', '../../imgs/lmbassbig.jpg')
+ //  })
+
+ // $('img').on('mouseleave', function(e){
+	//  e.preventDefault()
+ //    $(this).attr('src', '../../imgs/dbc_logo.jpg')
+ //  })
+ 
+ 
+//RELEASE 5: Experiment on your own
+ 
+  $( "img" ).animate({
+    width: "70%",
+    opacity: 0.4,
+    marginLeft: "0.6in",
+    fontSize: "3em",
+    borderWidth: "10px"
+  }, 1500 );
+ 
+ 
+ 
+ 
+})  // end of the document.ready function: do not remove or write DOM manipulation below this.
