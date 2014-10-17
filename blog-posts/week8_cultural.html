@@ -26,53 +26,23 @@
 
 <!-- begin post-content div -->
     <div id="content">
-      <h2>Using the Inject Method</h2><br>
+      <h2>Dealing with Conflict</h2><br>
 
-      <span class="post-date">September 18, 2014</span>
-<h3>Summary</h3>
+      <span class="post-date">October 16, 2014</span>
 
-<p>The inject method in Ruby is commonly used as a way to accumulate a collection of objects.  Given a set of objects, it will iterate over each one, executing whatever code is specified, and return a result. Inject is useful for dealing with collections of objects, such as strings, arrays, and hashes.  Let's have a look at the format, and then I will go over some possible use cases.</p>
+<p>When I was living in France, I live in an  apartment that was not in very good shape, even by French standards.  The bathroom was particularly bad.  The toilet would wobble every time we sat down on it (because we were fat, according to our landlady), and some previous tenant had sealed off gaps between the wall and the pipes but stuffing socks into them.   In the 3.5 years that we lived in Paris, we were never in a position to move.  My landlady, while not fundamentally a bad person, was very busy, and was out of the city most of the time.  She also seemed to have a blind spot as far as the state of the apartment was concerned.</p>
 
-<h3>Format</h3>
+<p>The conflict arose about a year into our stay there.  The downstairs neighbor came up to report that water from our bathroom was leaking into her closet, making it unusable.  This came as a complete surprise, since we had not seen any evidence of water leakage at all.  However, given the general state of the bathroom, I wasn't exactly shocked.  The rules  in France regarding renter vs landlord responsibilities with respect to insurance claims are a bit different than they are here, but no less confusing, especially for an outsider.  Basically, if the water damage was not caused by overflowing water, it's not the responsibility of the tenant. Since we hadn't had any flooding incidents, I thought I could just let my landlady know and let her take the appropriate action.</p>
 
-<span class = "code">[array elements].inject(parameter) { |result, element| code to be executed}</span>
+<p>However, the landlady refused to get involved, claiming that even if she was the owner of the apartment, it was our responsibility as the tenants to get our insurance to cover the repairs.  Obviously, my insurance company scoffed at this request.  Without going into too much detail, the whole situation quickly devolved into a blame game between all parties involved.  After many months, it came to light that not only had this happened before, but the  problem was being caused by building-wide plumbing problems that had to be handled by the homeowners association of the building.  I never found out how much my landlady knew about this and how much she just wanted to ignore the problem or pass it on to other people. </p>
 
+<p>I don't know what I could have done differently in this situation.  I could have been more assertive with the landlady, but it's hard in a situation where you don't know the laws and ins and out of things like insurance and your status as a non-citizen comes into play.   I really didn't have any power in the situation, other than breaking the lease and moving out of the apartment.  Honestly, I  still get angry when I think about this experience.  I do recognize that harboring a grudge is unproductive and a waste of energy.  I have two big takeaways from this experience.</p>
 
-<p>The inject method is called in the same way as any other method. That is, with the dot method following the object. For this example I've used an array.</p>
+<p>I get less angry if I think of the bathroom situation as a mis-alignment of goals rather than a case where the landlady was out to take advantage of me.  It really had little to do with me personally. Her goal were to have the problem fixed  with as little financial or time involvement as possible.   My goal was to stop the downstairs neighbor from bothering me about her closet and to stop being blamed for a situation over which I clearly had no control.  In a future situation, trying to agree on a shared outcome might be a way to lessen conflict.</p>
 
-<p>It's possible to pass arguments to the method.  The argument passed will act as the starting point for the iteration. It could be an empty array, an empty hash, or a number.</p>
+<p>Being in a conflict where there was a power imbalance was a really good learning experience.  In conflict situations where I am on the other side of that imbalance, I've learned both not to take advantage and also to consider how the other person is feeling.</p>
 
-<p>Next we set up the code.  The  argument on the left is the result. It will always hold the value of the accumulated result of the all of the iterations of the code block.  The argument on the right represents each element to be passed through the code block.</p>
-
-<h3>Uses</h3>
-
-<p>One of the simplest uses of the inject method is to return a sum of an array of numbers. For example:</p>
-
-<span class = "code">[1, 2, 3, 4].inject(0) { |result, element| result + element }</span>
-
-<p>In this case, we are iterating over the array [1,2,3,4] is added to the result for a total of 10.  Each time we execute the code, the result is stored.</p>
-
-<p>We could also use inject to build a hash based on some existing values stored in a multiple array:</p>
-
-<span class = "code">petHash = [["cat", "sneaky"], ["dog", "great"], ["ferret", "stinky"]].inject({}){<br>
-  |hash, element|<br>
-  hash[element[0]] = element[1]
-  hash<br>
-  }</span>
-
-<p>with the result:</p>
-
-<span class = "code">{"cat"=>"sneaky", "dog"=>"great", "ferret"=>"stinky"}</span>
-
-<p>In this case, we have iterated over an existing multidimensional array and used its values to create a new hash, called petHash.  The parameter of the inject method is an empty array.  The accumulated result is a hash.  With each iteration, each element of the original array becomes a key-value pair in the new hash.</p>
-
-<p>Here are a few of the resources I used to help me understand the inject method:</p>
-<ul>
-<li><a href="http://ruby-doc.org/core-2.0.0/Enumerable.html#method-i-inject" target="_blank">Ruby Docs</a></li>
-<li><a href="http://blog.jayfields.com/2008/03/ruby-inject.html" target="_blank">Jay Fields' Blog</a></li>
-<li><a href="https://www.udemy.com/blog/ruby-inject/" target="_blank">Udemy: Ruby Inject: How to manipulate your arrays with ease</a></li>
-</ul>
-        </div>
+</div>
 <!-- end content div -->
 
 <!-- begin sidebar div -->

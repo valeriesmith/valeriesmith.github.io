@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css">
+    <link href='http://fonts.googleapis.com/css?family=Pompiere' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css">
+    <title>Valerie Smith's DBC Adventure</title>
+  </head>
+  <body>
+
+    <div id="wrapper">
+<!-- begin header div -->
+      <div id="header">
+        Valerie Smith's DBC Blog
+          <div id="top-nav">
+            <ul class="nav">
+              <li><a href="../index.html">Home</a>
+              <li class="nav">Blog
+              <li class="nav"><a href="../dbc_proj_index.html">DBC Projects</a>
+              <li class="nav"><a href="../personal_proj_index.html">Personal Projects</a>
+              <li class="nav"><a href="../about_me.html">About Me</a>
+          </ul>
+        </div>
+      </div>
+
+
+<!-- begin post-content div -->
+    <div id="content">
+      <h2>An Overview of Regular Expressions</h2><br>
+
+      <span class="post-date">October 16, 2014</span>
+
+<p>This week we're being asked to write about one of the technical topics that we haven't covered in Phase 0.  One of the suggestions was Regular Expressions, and since it's been on my list of things I want to learn about for some time now, that's the topic I'll cover in this week's technical blog. </p> 
+
+<p>I can't cover everything about Regular Expressions, or RegExp, in the hour or so that we are supposed to allot for each blog entry, so I'll try to paint a broad picture of how it works and what it does, as well as provide some examples  and resources for further research.</p>
+
+<h3>What is RexExp?</h3>
+
+<p>In short, RegExp is a way to find patterns in text, like a super fancy find and replace function. RegExp commands are a system of basic blocks that can be used to find and manipulate information in a block of text. Regular Expression is what is says, an expression of  text or numbers that appear in your code, data, or document.</p>
+
+<p>Unlike a normal search and replace function that you would find in a text editor, you can use RegExp to alter info in very customized ways.  A very simple example of this is a case where you might want to 
+to change the year in a set of database records, but only for a given month.   A normal find/replace tool won't do this.  It would change all of the instances of the year found in the data.  Additionally, we can specify that we want to replace something at the beginning of a word, the end of a word, a word by itself, or only a word that appears more than x number of times in a sentence, document, paragraph, etc.</p>
+
+<h3>How can I use RegExp in my code?</h3>
+
+<p>Regexp is incorporated into most programming languages including Ruby and Javascript. There is some variation in the way it's invoked but overall the syntax is similar across languages.  There are many ways that Regexp can be useful in Ruby, and I don't know what most of them are yet.  Here are a few simple examples of how we have seen it used and could use it in the work we've done so far.</p>
+
+<h4>Week 4: Cipher Exercise</h4>
+
+<p>The code snippet below checks to see if a character in the decoded_sentence array is a number, and if it is, it divides that all instances of that number by 100 and substitutes them.</p>
+
+<p>First, we call the .match method on the array.  In the  parameters for the method, we are telling the method to look for digits, denoted by \d.  The // characters denote a regexp expression, and the + means that we are looking for one or more digits in a row.  The parameters for the second method are the same.  Here, we're telling Ruby to substitute all of these digits with the same digit divided by 100.</p>
+
+<img width="70%" src="../imgs/cipher.jpg"></src>
+
+<h4>Week 5 Bonus: Reverse Polish Notation</h4>
+
+<p>In this exercise, we had to evaluate a string and output its evaluation in reverse polish notation(link).
+In order to do this, we had to evaluate whether the characters in the string were numbers or operators, and tell the code to do different things based on this information.</p>
+
+<p>The code below shows a very simplified version of how to do this using Regular Expressions.  After I split the original input string into an array, I then look at each element and evaluate it according to whether it matches a pattern I've specified using Regexp.  First, I look to see if the element is a digit, using the .match method and the notation for a digit. This is the same thing we did  above in the cipher example.  Next, I check to see if the element matches the multiplication, addition, or subtraction operators. I do this by specifying each operator in my notation, separated by the || or operator.  Notice that I use the backslash/escape character, so that the operators will be read as text and not as actual operators.  Also notice that because all of the operators are being evaluated together, I only have one set of // characters.</p>
+
+<img width="70%" src="../imgs/RPN.jpg"></src>
+
+<p>Terminal Output:</p>
+
+<img width="70%" src="../imgs/terminal_output.jpg"></src>
+
+<h3>It looks really complicated - How do I learn and use RegExp?</h3>
+
+
+<p>Regexp is somewhat complicated and hard to interpret. The best way to learn it, according to what I have read, is to think about what you are trying to find/match in plain English, and then break it down to small parts of a Regexp expression. Sound familiar? </p> 
+
+<h3>Resources</h3>
+
+<p><a href="http://regex.bastardsbook.com/">The Bastards Book of Regular Expressions</a><br>
+This book can be downloaded for free, but it's well worth the suggested $4.99 donation if you're interested in taking some time to read about RegExp.</p>
+
+<p><a href="http://rubular.com/">Rubular</a><br>
+An app for editing and testing regexes in Ruby.</p>
+
+<p><a href="http://scriptular.com/">Scriptular</a><br>
+An app for editing and testing regexes in Javascript.</p>
+
+<p><a href="http://scriptular.com/">Regular-Expressions.info Quick Start Guide</a><br>
+A very brief overview of Regular Expressions.</p>
+
+<p><a href="http://regexlib.com/CheatSheet.aspx?AspxAutoDetectCookieSupport=1">RegExLib.com Regular Expression Cheat Sheet</a></p>
+
+<p><a href="http://www.cheatography.com/davechild/cheat-sheets/regular-expressions/">Cheatography Regular Expressions Cheat Sheet</a></p>
+
+<p><a href="http://www.w3schools.com/jsref/jsref_obj_regexp.asp">W3 Schools Javascript RegExp Reference</a></p>
+
+<p><a href="http://www.ruby-doc.org/core-2.0.0/Regexp.html">Ruby Docs RegExp Documentation</a></p>
+
+        </div>
+<!-- end content div -->
+
+<!-- begin sidebar div -->
+    <div id="sidebar">
+      <div id="sidebar-bucket"><span class="bucket-title">Recent Posts</span>
+        <ul>
+        <li><a href="http://valeriesmith.github.io/blog-posts/week8_cultural.html">Dealing with Conflict</a></li>
+        <li><a href="http://valeriesmith.github.io/blog-posts/week8_technical.html">An Overview of Regular Expressions</a></li>
+        <li><a href="http://valeriesmith.github.io/blog-posts/week7_cultural.html">Personal Values and Stereotype Threat</a></li>
+        <li><a href="http://valeriesmith.github.io/blog-posts/week7_technical.html">A Comparison Between SQL and noSQL Databases</a></li>
+        <li><a href="http://valeriesmith.github.io/blog-posts/week6_cultural.html">Stereotype Threat</a></li>
+        <li><a href="http://valeriesmith.github.io/blog-posts/week6_technical.html">Blocks and Procs and Lambdas - Oh My!</a></li>
+        <li><a href="http://valeriesmith.github.io/blog-posts/week5_cultural.html">Pair Shaped</a></li>
+          <li><a href="http://valeriesmith.github.io/blog-posts/week5_technical.html">Working with Classes in Ruby</a></li>
+          <li><a href="http://valeriesmith.github.io/blog-posts/week_4_cultural.html">Technology Industry Problem: Worker Shortage and Training</a></li>
+          <li><a href="http://valeriesmith.github.io/blog-posts/week_4_technical.html">Using the Inject Method</a></li>
+          <li><a href="week3_cultural.html">An Exploration of my Gregorc Learning Style</a></li>
+          <li><a href="week3_technical.html">All About JavaScript</a></li>
+          <li><a href="t2-css.html">Working with Margin, Border, and Padding in CSS</a></li>
+          <li><a href="c1-chefs-kitchen.html">Software Development is a Team Sport</a></li>
+          <li><a href="t1-compare-websites.html">Technical Blog 1 - Website Comparison</a></li>
+        </ul>
+      </div>
+
+        <div id="sidebar-bucket"><span class="bucket-title">Blog Archives</span>
+        <ul>
+          <li><a href="#">October 2014 (6)</a></li>
+          <li><a href="#">September 2014 (7)</a></li>
+          <li><a href="#">August 2014 (2)</a ></li>
+
+        </ul>
+      </div>
+
+    <div id="sidebar-bucket"><span class="bucket-title">Blogs I Like</span>
+        <ul>
+          <li><a target="_blank" href="http://devbootcamp.com/blog/">Dev Bootcamp Blog</a></li>
+          <li><a target="_blank" href="http://www.mymodernmet.com/">My Modern Met</a></li>
+          <li><a target="_blank" href="http://dukegreene.wordpress.com/">Duke Green is Thinking</a></li>
+          <li><a target="_blank" href="http://www.fashion-incubator.com/">Fashion Incubator</a></li>
+          <li><a target="_blank" href="http://dreamdogsart.typepad.com/">Dog Art Today</a></li>
+          <li><a target="_blank" href="http://www.dogshaming.com/">Dog Shaming</a></li>
+        </ul>
+      </div>
+
+    </div>
+<!-- end sidebar div -->
+
+<!-- begin footer div -->
+    <div id="footer">
+     FIND ME ON
+      <a href="http://github.com/valeriesmith" target="_blank"><img src="../imgs/icons/GitHub-Mark-32px.png" width="24px"/></a>
+      <a href="http://twitter.com/valerie_g_smith" target="_blank"><img src="../imgs/icons/social-045_twitter.png"/></a>
+      <a href="https://www.facebook.com/shinyredshoes" target="_blank"><img src="../imgs/icons/social-046_facebook.png"/></a>
+      <a href="https://www.linkedin.com/pub/valerie-smith/2/482/b77" target="_blank"><img src="../imgs/icons/social-051_linkedin.png"/></a>
+      <a href="https://plus.google.com/118211542274486729726/posts" target="_blank"><img src="../imgs/icons/social-080_google_plus.png"/></a>
+      <a href="http://www.pinterest.com/shinyredshoes/" target="_blank"><img src="../imgs/icons/social-073_pinterest.png"/></a>
+    </div>
+<!-- end footer div -->
+
+</div>
+
+  </body>
+</html>
