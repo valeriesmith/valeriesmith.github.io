@@ -3,11 +3,22 @@ body {
   font-family: helvetica,sans-serif;
   font-size: 1em;
   color: #424242;
+  background-color: #CCCCCC;
 }
 
 #wrapper {
-  width: 90%;
-  margin: auto
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  background-color: #FFFFFF;
+}
+
+#header_img {
+  margin: auto;
+  background-image: url("../imgs/seine_stones.jpg");
+  background-size: cover;
+  min-height: 250px;
 }
 
 a:link {
@@ -29,15 +40,15 @@ ul {
 }
 
 #header {
+  position: fixed;
   font-size: 2em;
-  width: 90%;
+  width: 70%;
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 1%;
   padding-bottom: 1%;
-
-  background-color: #000000;
   color: #E8E8E8;
+  background-color: #000000;
   font-family: Pompiere;
 }
 
@@ -66,21 +77,15 @@ ul {
 }
 
 #content {
-  width: 70%;
-  padding-left: 5%;
+  width: 100%;
+  /*padding-left: 5%;
   padding-top: 1%;
   padding-right:5%;
-  padding-bottom: 5%;
-  /*background-color: blue;*/
+  padding-bottom: 5%;*/
   float: left;
   font-size: .75em;
   min-height: 300px;
 }
-
-#content img {
-max-width: 80%;
-}
-
 
 #content h2 {
   margin-bottom: 0;
