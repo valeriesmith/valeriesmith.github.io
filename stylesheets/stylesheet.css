@@ -100,10 +100,9 @@ ul {
 
 #content table {
   border-collapse: collapse;
-  border: 0px;
 }
 
-.date {
+.post_date {
   width: 5%;
   font-family: Pompiere;
   text-align: right;
@@ -112,7 +111,41 @@ ul {
   border-top: 0;
   border-left: 0;
   border-right: 1px solid #CCCCCC;
+  padding-right: 1%;
 
+}
+
+.post_title {
+  font-family: Pompiere;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-left: 1%;
+}
+
+.post_content {
+  font-size: 1em;
+  padding: 1%;
+  border-top: 1px solid #CCCCCC;
+}
+
+.post_footer {
+  color: #B85C00;
+  font-size: .8em;
+  text-align: center;
+  font-style: italic;
+}
+
+.post_snippet {
+  font-size: 1em;
+  padding: 1%;
+  border-top: 1px solid #CCCCCC;
+}
+
+.post_snippet_more {
+  color: #B85C00;
+  font-size: .8em;
+  text-align: center;
+  font-style: italic;
 }
 
 #about_me_img {
@@ -120,22 +153,6 @@ ul {
   float: right;
   max-width: 80%;
   border: 1px solid #CCCCCC;
-}
-
-#left {
-  text-align: center;
-  float: left;
-  padding-right: 1%;
-  font-size: 1em;
-}
-
-#right {
-  float: left;
-}
-
-#content h2 {
-  /*margin-bottom: 0;
-  padding-bottom: 0;*/
 }
 
 

@@ -4,6 +4,7 @@
     <link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css">
     <link href='http://fonts.googleapis.com/css?family=Pompiere' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/t2-css.css">
     <title>Valerie Smith's DBC Adventure</title>
   </head>
   <body>
@@ -11,11 +12,11 @@
     <div id="wrapper">
 <!-- begin header div -->
       <div id="header">
-        Valerie Smith's DBC Blog
+        Valerie Smith: Aspiring Web Developer
           <div id="top-nav">
             <ul class="nav">
               <li><a href="../index.html">Home</a>
-              <li class="nav">Blog
+              <li class="nav"><a href="index.html">Blog</a>
               <li class="nav"><a href="../dbc_proj_index.html">DBC Projects</a>
               <li class="nav"><a href="../personal_proj_index.html">Personal Projects</a>
               <li class="nav"><a href="../about_me.html">About Me</a>
@@ -23,82 +24,41 @@
         </div>
       </div>
 
-
+ <div id="header_img_sub"></div>
 <!-- begin post-content div -->
+
     <div id="content">
-      <h2>Working with Classes in Ruby</h2><br>
+    <table width = "100%">
+    <tr><td class="post_date">28</td><td></td></tr>
+    <tr><td class="post_date">SEP</td><td></td></tr>
+    <tr><td class="post_date">2014</td><td class="post_title">Working with Classes in Ruby</td></tr>
 
-      <span class="post-date">September 28, 2014</span>
-<p>For this post, I'll use technical design for apparel as my the real world example of building a class in Ruby. Of course, this is a very simplified example. Let's say that I want to have a shirt produced in a factory. I have to provide exact instructions to the machine operator.  It is not his or her job to make judgement calls about what the shirt looks like or how it should be constructed.</p>
+    <tr><td class="post_content"></td><td class="post_content">
+<p>At the beginning of DBC, the combination of my lack of confidence in my technical ability and my feeling of social awkwardness made me dread pairing.  Over the past five weeks, it has mostly become a good experience.   I don't know if I will ever totally be in my comfort zone while pairing, especially remotely.  However, it has gotten a lot easier with practice.</p>
 
-<p>To start, will use the same main pattern pieces for each shirt. Every time I want to produce a new shirt, I cut out the pieces from a pattern.  The pattern corresponds to a class, with the cut out pieces being an instance of this class.  Now, I have choices to make about my shirt. For example, will it have short or long sleeves?  If I go with long sleeves, what technique will I use to finish them? Secondly, what color will the shirt be?</p>
+<p>My biggest problem with pairing is that I tend to zone out or panic when I'm faced with something I don't understand and have had to work hard to get out of that mindset.  All of a sudden, I am transported right back to eight grade math class, but I can't get a hall pass to escape to the bathroom.  Being open with my pair about the way I'm feeling when that happens has helped a bit.  I don't always feel comfortable saying that I am stuck, especially if I think that the problem is simple and I <em>should</em> be able to understand it easily.</p>
 
-<p>The decisions that I make about the shirt's sleeves and color correspond to the instance variables of a class, which hold what is called state information about a class instance. Now, I have to decide how I will construct the shirt, what sewing techniques I'll use.  The construction methods used to construct the shirt correspond to instance methods in a class.</p>
+<h3>What is Effective Feedback?</h3>
 
-<p>Let's take a look at how this might play out in Ruby.  I want to produce an instruction sheet for the garment factory.  To keep the code short, I am giving instructions about two things: how to proceed if the shirt has long or short sleeves, and what color thread to use based on the color of the shirt.</p>
+<p>One of the first things we learned at DBC is how to give feedback.  In the past, I've found that people tend to be either overly critical or overly positive when giving feedback.  Thinking about whether a piece of feedback is specific, actionable, and kind has proven to be helpful in both  giving and receiving feedback.</p>
 
-<img src="../imgs/shirt_code.jpg"></src>
+<p>Giving <em>specific</em> feedback means providing  context and detail to the recipient. For example,  if I paired with someone and had trouble hearing the person because of background noise on his or her end, I wouldn't want to simply say that I couldn't understand the conversation. Instead, I would specify that the dog barking or the background noise in the cafe made it difficult to hear. </p>
 
-<p>I start off by defining a class called Shirt.  Next, I create a method called initialize.  This method runs every time I create a new instance of class Shirt.  Since this class is pretty simple, all I'm doing in the initialize method is saying that my I will be specifying the sleeve length and color of my shirt.</p>
+<p><em>Actionable</em> and specific feedback are related.  The more specific the feedback, the more likely it is to be actionable.  In the example above,  by identifying the source of the problem,  I give the recipient the opportunity to take action and change the situation.  There isn't much point in giving feedback about something that can't be changed or that is beyond the receiver's control.</p>
 
-<p>Next, I want to create some instructions based on decisions I've made about the sleeves and color of the shirt.  The instructions method creates the instructions that the sewing operator will use to make the shirt. In this method, I'm also telling the factory to use thread the same color as the shirt.</p>
+<p>It's important to remember that <em>kind</em> and  <i>nice</i> are not equivalent.  When I think of nice, I think of the stereotypical way of insulting someone by saying something catty or mean followed by a <em>blessherheart.</em>  Couching negative feedback in this way is not necessarily helpful, and it's condescending because I'm assuming that the recipient can't accept constructive feedback unless it's sugar-coated.  It lessens the value of the positive things that I do say, since the receiver might think that I'm only saying something good in order to be able to say something bad. To me, providing kind feedback means being respectful of the other person's feelings, recognizing when something is beyond the person's control, and imagining how I myself would feel if I received the same feedback.</p>
 
-<p>At the very bottom of the code, I create a new instance of the shirt, called newShirt. I have decided that my shirt will have long sleeves and will be green in color. The last thing that I do is call the instructions method on this new instance of shirt.  When I do this, the program generates my woefully inadequate sewing instructions based on the options I've chosen for the shirt: long sleeves and the color green.</p>
+<h3>My own Experience with Feedback at DBC</h3>
 
-<p>My output would look like this:</p>
+<p>Overall, the feedback I've received from my fellow students and from the guides at DBC has been incredibly helpful. I wouldn't say that it makes me feel vulnerable. On the contrary,  it has helped me to realize that people are not judging me as harshly as I judge myself even though I do have some issues to work on.  There is definitely a common thread in a lot of the feedback I've received. I need to work on feeling confident, and in being more vocal when working through problems. The specific feedback I've received about these issues has helped me create a roadmap for improvement.  Also,  I was pleasantly surprised to discover that my fellow students think I am friendly and pleasant, since I have never thought of myself that way.</p>
+</td></tr>
 
-<p><strong>Use green thread on the garment, and add a cuff with buttons to finish the sleeve.</strong></p>
+</table>
 
-<p>You can see that the @color and construction variables have been replaced with the values I've supplied in the initialize method, for the color.  Note that the construction variable does not have an @ in front of it. This is because we do not need to refer to it outside of this method. The @color variable, meanwhile, is referenced throughout the class, and the @ means that it will be recognized anywhere within that scope.</p>
-
-
-        </div>
+<p class="post_footer"><< <a href="week_4_cultural.html">previous</a> | <a href="week5_cultural.html">next</a> >></a></p>
+</div>
+<br>
 <!-- end content div -->
-
-<!-- begin sidebar div -->
-    <div id="sidebar">
-      <div id="sidebar-bucket"><span class="bucket-title">Recent Posts</span>
-        <ul>
-        <li><a href="http://valeriesmith.github.io/blog-posts/week8_cultural.html">Dealing with Conflict</a></li>
-        <li><a href="http://valeriesmith.github.io/blog-posts/week8_technical.html">An Overview of Regular Expressions</a></li>
-        <li><a href="http://valeriesmith.github.io/blog-posts/week7_cultural.html">Personal Values and Stereotype Threat</a></li>
-        <li><a href="http://valeriesmith.github.io/blog-posts/week7_technical.html">A Comparison Between SQL and noSQL Databases</a></li>
-        <li><a href="http://valeriesmith.github.io/blog-posts/week6_cultural.html">Stereotype Threat</a></li>
-        <li><a href="http://valeriesmith.github.io/blog-posts/week6_technical.html">Blocks and Procs and Lambdas - Oh My!</a></li>
-        <li><a href="http://valeriesmith.github.io/blog-posts/week5_cultural.html">Pair Shaped</a></li>
-          <li><a href="http://valeriesmith.github.io/blog-posts/week5_technical.html">Working with Classes in Ruby</a></li>
-          <li><a href="http://valeriesmith.github.io/blog-posts/week_4_cultural.html">Technology Industry Problem: Worker Shortage and Training</a></li>
-          <li><a href="http://valeriesmith.github.io/blog-posts/week_4_technical.html">Using the Inject Method</a></li>
-          <li><a href="week3_cultural.html">An Exploration of my Gregorc Learning Style</a></li>
-          <li><a href="week3_technical.html">All About JavaScript</a></li>
-          <li><a href="t2-css.html">Working with Margin, Border, and Padding in CSS</a></li>
-          <li><a href="c1-chefs-kitchen.html">Software Development is a Team Sport</a></li>
-          <li><a href="t1-compare-websites.html">Technical Blog 1 - Website Comparison</a></li>
-        </ul>
-      </div>
-
-        <div id="sidebar-bucket"><span class="bucket-title">Blog Archives</span>
-        <ul>
-          <li><a href="#">October 2014 (6)</a></li>
-          <li><a href="#">September 2014 (7)</a></li>
-          <li><a href="#">August 2014 (2)</a ></li>
-
-        </ul>
-      </div>
-
-    <div id="sidebar-bucket"><span class="bucket-title">Blogs I Like</span>
-        <ul>
-          <li><a target="_blank" href="http://devbootcamp.com/blog/">Dev Bootcamp Blog</a></li>
-          <li><a target="_blank" href="http://www.mymodernmet.com/">My Modern Met</a></li>
-          <li><a target="_blank" href="http://dukegreene.wordpress.com/">Duke Green is Thinking</a></li>
-          <li><a target="_blank" href="http://www.fashion-incubator.com/">Fashion Incubator</a></li>
-          <li><a target="_blank" href="http://dreamdogsart.typepad.com/">Dog Art Today</a></li>
-          <li><a target="_blank" href="http://www.dogshaming.com/">Dog Shaming</a></li>
-        </ul>
-      </div>
-
-    </div>
-<!-- end sidebar div -->
 
 <!-- begin footer div -->
     <div id="footer">
