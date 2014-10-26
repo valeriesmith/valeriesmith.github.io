@@ -94,8 +94,9 @@ ul {
   min-height: 300px;
 }
 
-#content h1,h2 {
+#content h1,h2,h3 {
     font-family: Pompiere;
+    font-weight: bold;
 }
 
 #content table {
@@ -117,7 +118,7 @@ ul {
 
 .post_title {
   font-family: Pompiere;
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 1.5em;
   padding-left: 1%;
 }
