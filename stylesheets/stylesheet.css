@@ -4,6 +4,7 @@ body {
   font-size: 1em;
   color: #424242;
   background-color: #CCCCCC;
+  overflow-x:hidden;
 }
 
 #wrapper {
