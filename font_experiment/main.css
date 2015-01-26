@@ -1,0 +1,81 @@
+
+
+body {
+  background: url("https://newevolutiondesigns.com/images/freebies/city-wallpaper-5.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-size: 1em;
+  color: white;
+}
+
+.fa_title_large {	
+	font-family: 'FontAwesome';
+	color: gray;
+	font-size: 5em;
+}
+
+.fa_title_small {	
+	font-family: 'FontAwesome';
+	color: gray;
+	font-size: 2em;
+}
+
+#fa_spinner {
+	font-size: 10em;
+}
+
+.google_quattrocento_large {
+	font-size: 5em;
+	font-family: 'Quattrocento Sans';
+}
+
+.google_quattrocento_small {
+	font-size: 2em;
+	font-family: 'Quattrocento Sans';
+}
+
+.google_raleway_large {
+	font-size: 5em;
+	font-family: 'Raleway';
+}
+
+.google_raleway_small {
+	font-size: 2em;
+	font-family: 'Raleway';
+}
+
+.google_rocksalt_large {
+	font-size: 5em;
+	font-family: 'Rock Salt';
+}
+
+.google_rocksalt_small {
+	font-size: 2em;
+	font-family: 'Rock Salt';
+}
+
+.google_opensans_large {
+	font-size: 5em;
+	font-family: 'Open Sans';
+}
+
+.google_opensans_small {
+	font-size: 2em;
+	font-family: 'Open Sans';
+}
+
+.google_roboto_large {
+	font-size: 5em;
+	font-family: 'Roboto';
+}
+
+.google_roboto_small {
+	font-size: 2em;
+	font-family: 'Roboto';
+}
+
+
+
+
